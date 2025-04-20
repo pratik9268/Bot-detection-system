@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form id="registerForm" action="/submit" method="post">
+            <input type="hidden" id="hidden_name" name="hidden_name">
+            <input type="hidden" id="device_type" name="device_type">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label>OTP:</label>
+            <input type="text" id="otp" name="otp" required><br>
+            <button type="submit" id="button">Submit</button>
+        </form>
+        <div id="hiddenFieldDisplay"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
